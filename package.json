@@ -4,7 +4,8 @@
   "description": "Solution of a small problem of KickStarter using Solidity,Ethereum Network and React",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "next dev"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
     "fs-extra": "^6.0.1",
     "ganache-cli": "^6.1.5",
     "mocha": "^5.2.0",
+    "next": "^4.1.4",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "solc": "^0.4.19",
     "truffle-hdwallet-provider": "0.0.3",
     "web3": "^1.0.0-beta.26"
