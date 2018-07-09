@@ -50,4 +50,16 @@ describe('deploy',()=>{
         const isContributor = await campaign.methods.approvers(accounts[1]).call();
         assert(isContributor);
     });
+
+    it('minimum contribution', async ()=>{
+        try {
+            await campaign.methods.contribute().send({
+                from: accounts[1],
+                value: '3'
+            })
+            assert(false);
+        } catch (error) {
+            assert(error);
+        }
+    })
 })
