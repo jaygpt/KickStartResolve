@@ -4,7 +4,7 @@
   "description": "Solution of a small problem of KickStarter using Solidity,Ethereum Network and React",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

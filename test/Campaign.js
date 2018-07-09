@@ -10,20 +10,44 @@ let accounts;
 let factory;
 let compaignAddress;
 let campaign;
-beforeEach(async() =>{
-    accounts = web3.eth.getAccounts();
 
-    factory = await web3.eth.Contract(JSON.parse(compiledFactory.interface))
-        .deploy({data: compiledFactory.bytecode})
-        .send({from:accounts[0],gas: '1000000' })
+beforeEach(async () => {
+    accounts = await web3.eth.getAccounts();
+  
+    factory = await new web3.eth.Contract(JSON.parse(compiledFactory.interface))
+      .deploy({ data: compiledFactory.bytecode })
+      .send({ from: accounts[0], gas: '1000000' });
+  
+    await factory.methods.createCampaign('100').send({
+      from: accounts[0],
+      gas: '1000000'
+    });
     
-    await factory.methods.createCampaign('100')
-        .send({from: accounts[0],gas: '1000000' })
-    
-    const address[] = await factory.methods.getDeployedCampaigns().call();
-    compaignAddress = address[0];
-    // to load already deployed campaign
-    campaign = await web3.eth.Contract(JSON.parse(compiledCampaign.interface),compaignAddress)
-});
+    [campaignAddress] = await factory.methods.getDeployedCampaigns().call();
+    // to get deployed contract
+    campaign = await new web3.eth.Contract(
+      JSON.parse(compiledCampaign.interface),
+      campaignAddress
+    );
+  });
 
-describe('deploy')
+describe('deploy',()=>{
+    it('deployed',()=>{
+        assert.ok(factory.options.address);
+        assert.ok(campaign.options.address);
+    });
+
+    it('manager',async () => {
+        const manager = await campaign.methods.manager().call();
+        assert.equal(accounts[0], manager);
+    })
+
+    it('allows people to contribute money and marks them as approvers', async () => {
+        await campaign.methods.contribute().send({
+          value: '200',
+          from: accounts[1]
+        });
+        const isContributor = await campaign.methods.approvers(accounts[1]).call();
+        assert(isContributor);
+    });
+})
