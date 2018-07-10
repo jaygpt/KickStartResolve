@@ -1,5 +1,18 @@
-import react from 'react';
+import React , { Component }from 'react';
+import factory from '../ethereum/factory'
 
-export default ()=>{
-    return <h1> hii Root apage</h1>
+class CampaignIndex extends Component{
+    async componentDidMount(){
+        const campaign = await factory.methods.getDeployedCampaigns().call();
+
+        console.log(campaign);
+    }
+
+    render(){
+        return(
+            <div> Campaign Index! </div>
+        )
+    }
 }
+
+export default CampaignIndex;
