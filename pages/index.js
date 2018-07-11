@@ -1,6 +1,8 @@
 import React , { Component }from 'react';
 import factory from '../ethereum/factory';
 import { Card } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
+import Layout from '../components/layout';
 
 class CampaignIndex extends Component{
 //Nextjs have special way to load initial way to fetch data and it is
@@ -14,7 +16,7 @@ class CampaignIndex extends Component{
         const items = this.props.campaigns.map(address => {
             return {
                 header: address,
-                description: <h3>View Description </h3>,
+                description: <a>View Description </a>,
                 fluid: true,
             };
         });
@@ -23,7 +25,20 @@ class CampaignIndex extends Component{
     }
     render(){
         return(
-            <div> Campaign Index! {this.renderCampaign()}</div>
+            <div>
+            <Layout>
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"></link>
+            <Button
+                floated = "right"
+                content= "Create Campaign"
+                icon = "add circle"
+                primary
+            />
+            {this.renderCampaign()}
+
+            </Layout>
+
+            </div>
         )
     }
 }
