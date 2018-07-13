@@ -3,7 +3,7 @@ import Layout from '../../components/layout';
 import Campaign from '../../ethereum/Campaign';
 import { Card } from 'semantic-ui-react';
 import web3 from '../../ethereum/web3';
- 
+import ContributeForm from '../../components/ContributeForm'
 class CampaignShow extends Component{
     //getInitialProps methopd is used to fetch initial data from browser and other places
 
@@ -69,7 +69,7 @@ class CampaignShow extends Component{
             <Layout>
             <h1> Campaign is Here!! </h1>
             {this.renderCard()}
-
+            <ContributeForm />
             </Layout>
         )
 
