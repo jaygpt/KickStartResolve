@@ -9,8 +9,8 @@ class NewRequest extends Component{
     state = {
         value : '',
         description: '',
-        recepient: ''
-    }
+        recipient: ''
+    };
     
     static async getInitialProps(props){
         const { address } = props.query;
@@ -18,16 +18,33 @@ class NewRequest extends Component{
         return { address };
     }
 
+    onSubmit = async event => {
+        event.preventDefault();
+
+        const campaign = Campaign(this.props.address);
+        const { description, value, recipient } = this.state;
+        try{
+            const accounts = await web3.eth.getAccounts();
+            await campaign.methods
+                .createRequest(description, web3.utils.toWei(value,'ether'), recipient)
+                .send({from: accounts[0]});
+
+        }catch(err){
+
+        }
+
+    }
+
     render(){
         return(
             <Layout>
             <h1>Create Request</h1>
-            < Form >
+            < Form  onSubmit = {this.onSubmit} >
             <Form.Field>
             <label>Descripton</label>
             <Input
-                value = {this.state.value}
-                onChange = { event => this.setState( {description: event.target.description})}
+                value = {this.state.description}
+                onChange = { event => this.setState( {description: event.target.value})}
             />
             </Form.Field>
             <Form.Field>
@@ -38,10 +55,14 @@ class NewRequest extends Component{
             />
             </Form.Field>
             <Form.Field>
-            <label>Recepient:</label>
-            <Input />
+            <label>Recipient</label>
+            <Input
+              value={this.state.recipient}
+              onChange={event =>
+                this.setState({ recipient: event.target.value })}
+            />
             </Form.Field>
-            < Button > Request </ Button>
+            < Button primary >Create Request </ Button>
             </ Form>
             
             </Layout>
@@ -49,4 +70,4 @@ class NewRequest extends Component{
     }
 }
 
-export default NewRequest;
+export default NewRequest; 
