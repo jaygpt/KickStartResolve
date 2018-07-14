@@ -30,6 +30,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _semanticUiReact = require('semantic-ui-react');
 
+var _web = require('../ethereum/web3');
+
+var _web2 = _interopRequireDefault(_web);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/home/jay/Desktop/new/KickStart/components/RequestRow.js';
@@ -49,6 +53,9 @@ var RequestRow = function (_Component) {
         value: function render() {
             var Row = _semanticUiReact.Table.Row,
                 Cell = _semanticUiReact.Table.Cell;
+            var _props = this.props,
+                id = _props.id,
+                request = _props.request;
 
             return (
 
@@ -56,19 +63,34 @@ var RequestRow = function (_Component) {
                 _react2.default.createElement(Row, {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 10
+                        lineNumber: 13
                     }
                 }, _react2.default.createElement(Cell, {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 11
+                        lineNumber: 14
                     }
-                }, this.props.id), _react2.default.createElement(Cell, {
+                }, id), _react2.default.createElement(Cell, {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 12
+                        lineNumber: 15
                     }
-                }))
+                }, request.description), _react2.default.createElement(Cell, {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 16
+                    }
+                }, _web2.default.utils.fromWei(request.value, 'ether')), _react2.default.createElement(Cell, {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 17
+                    }
+                }, request.recipient), _react2.default.createElement(Cell, {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 18
+                    }
+                }, request.approvalCount))
             );
         }
     }]);
@@ -77,4 +99,4 @@ var RequestRow = function (_Component) {
 }(_react.Component);
 
 exports.default = RequestRow;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvUmVxdWVzdFJvdy5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIlRhYmxlIiwiUmVxdWVzdFJvdyIsIlJvdyIsIkNlbGwiLCJwcm9wcyIsImlkIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFROzs7Ozs7O0ksQUFDRjs7Ozs7Ozs7Ozs7aUNBRU07Z0JBQUEsQUFDSSxNQURKLEFBQ2tCLHVCQURsQixBQUNJO2dCQURKLEFBQ1MsT0FEVCxBQUNrQix1QkFEbEIsQUFDUyxBQUNiOztBQUVJOztBQUNBO2dDQUFFLGNBQUY7O2tDQUFBO29DQUFBLEFBQ0E7QUFEQTtBQUFBLG1DQUNDLGNBQUQ7O2tDQUFBO29DQUFBLEFBQU87QUFBUDtBQUFBLHdCQUFPLEFBQUssTUFEWixBQUNBLEFBQWtCLEFBQ2xCLG1DQUFBLEFBQUM7O2tDQUFEO29DQUxKLEFBR0ksQUFFQSxBQUdQO0FBSE87QUFBQTs7Ozs7O0FBVGEsQSxBQWV6Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJSZXF1ZXN0Um93LmpzIiwic291cmNlUm9vdCI6Ii9ob21lL2pheS9EZXNrdG9wL25ldy9LaWNrU3RhcnQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvUmVxdWVzdFJvdy5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIlRhYmxlIiwid2ViMyIsIlJlcXVlc3RSb3ciLCJSb3ciLCJDZWxsIiwicHJvcHMiLCJpZCIsInJlcXVlc3QiLCJkZXNjcmlwdGlvbiIsInV0aWxzIiwiZnJvbVdlaSIsInZhbHVlIiwicmVjaXBpZW50IiwiYXBwcm92YWxDb3VudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUTs7QUFDUixBQUFPLEFBQVU7Ozs7Ozs7OztJLEFBRVg7Ozs7Ozs7Ozs7O2lDQUVNO2dCQUFBLEFBQ0ksTUFESixBQUNrQix1QkFEbEIsQUFDSTtnQkFESixBQUNTLE9BRFQsQUFDa0IsdUJBRGxCLEFBQ1M7eUJBQ1EsS0FGakIsQUFFc0I7Z0JBRnRCLEFBRUcsWUFGSCxBQUVHO2dCQUZILEFBRU0saUJBRk4sQUFFTSxBQUNWOztBQUVJOztBQUNBO2dDQUFFLGNBQUY7O2tDQUFBO29DQUFBLEFBQ0E7QUFEQTtBQUFBLG1DQUNDLGNBQUQ7O2tDQUFBO29DQUFBLEFBQU87QUFBUDtBQUFBLG1CQURBLEFBQ0EsQUFDQSxxQkFBQyxjQUFEOztrQ0FBQTtvQ0FBQSxBQUFPO0FBQVA7QUFBQSwyQkFGQSxBQUVBLEFBQWUsQUFDZiw4QkFBQyxjQUFEOztrQ0FBQTtvQ0FBQSxBQUFPO0FBQVA7QUFBQSxpQ0FBTyxBQUFLLE1BQUwsQUFBVyxRQUFRLFFBQW5CLEFBQTJCLE9BSGxDLEFBR0EsQUFBTyxBQUFpQyxBQUN4QywyQkFBQyxjQUFEOztrQ0FBQTtvQ0FBQSxBQUFPO0FBQVA7QUFBQSwyQkFKQSxBQUlBLEFBQWUsQUFDZiw0QkFBQyxjQUFEOztrQ0FBQTtvQ0FBQSxBQUFPO0FBQVA7QUFBQSwyQkFSSixBQUdJLEFBS0EsQUFBZSxBQUd0Qjs7Ozs7O0FBaEJvQixBLEFBbUJ6Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJSZXF1ZXN0Um93LmpzIiwic291cmNlUm9vdCI6Ii9ob21lL2pheS9EZXNrdG9wL25ldy9LaWNrU3RhcnQifQ==
