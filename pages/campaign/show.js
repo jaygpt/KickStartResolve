@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Layout from '../../components/layout';
 import Campaign from '../../ethereum/Campaign';
-import { Card, Grid } from 'semantic-ui-react';
+import { Card, Grid, Button } from 'semantic-ui-react';
 import web3 from '../../ethereum/web3';
-import ContributeForm from '../../components/ContributeForm'
+import ContributeForm from '../../components/ContributeForm';
+import { Link } from '../../routes';
+
 class CampaignShow extends Component{
     //getInitialProps methopd is used to fetch initial data from browser and other places
 
@@ -77,7 +79,14 @@ class CampaignShow extends Component{
             <Grid.Column width={6} >
             <ContributeForm address = {this.props.address} />
             </Grid.Column>
+            <Link route = {`/campaign/${this.props.address}/request`}>
+            <a>
+            <Button primary floated = 'left' >View all Requests</Button>
+            </a>
+            </Link>
+            
             </Grid>
+          
             </Layout>
         )
 
