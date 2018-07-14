@@ -9,16 +9,14 @@ class RequestIndex extends Component{
         const { address } = props.query;
         const campaign = Campaign(address);
         const requestCount = await campaign.methods.getRequestsCount().call();
-        const requests = await Promise.all(
+        const request = await Promise.all(
             Array(requestCount)
             .fill()
-            .map((element, index) => {
-                return campaign.methods.requests(index).call();
+            .map((element,index) => {
+                campaign.methods.requests;
             })
         );
-
-        console.log(requests);
-        return { address };
+        return { address, requests, requestCount };
     }
     
     render(){
