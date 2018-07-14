@@ -9,7 +9,9 @@ class NewRequest extends Component{
     state = {
         value : '',
         description: '',
-        recipient: ''
+        recipient: '',
+        loading: false,
+        errorMessage: '',
     };
     
     static async getInitialProps(props){
@@ -23,23 +25,28 @@ class NewRequest extends Component{
 
         const campaign = Campaign(this.props.address);
         const { description, value, recipient } = this.state;
+        this.setState({loading: true ,errorMessage: ''})
+
         try{
             const accounts = await web3.eth.getAccounts();
             await campaign.methods
                 .createRequest(description, web3.utils.toWei(value,'ether'), recipient)
                 .send({from: accounts[0]});
-
+            Router.pushRoute(`/campaign/${this.props.address}/requests`);
         }catch(err){
-
+            this.setState({errorMessage: err.message});
         }
-
+        this.setState({ loading: false });
     }
 
     render(){
         return(
             <Layout>
+            <Link route={`/campaign/${this.props.address}/requests`}>
+          <a>Back</a>
+            </Link>
             <h1>Create Request</h1>
-            < Form  onSubmit = {this.onSubmit} >
+            < Form  onSubmit = {this.onSubmit} error={!!this.state.errorMessage}>
             <Form.Field>
             <label>Descripton</label>
             <Input
@@ -62,7 +69,8 @@ class NewRequest extends Component{
                 this.setState({ recipient: event.target.value })}
             />
             </Form.Field>
-            < Button primary >Create Request </ Button>
+            <Message error header="Oops!" content={this.state.errorMessage} />
+            < Button primary loading = {this.state.loading } >Create Request </ Button>
             </ Form>
             
             </Layout>
