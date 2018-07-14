@@ -17,9 +17,10 @@ class RequestIndex extends Component{
                 return campaign.methods.requests(index).call();
               })
           );
-      
+        const approversCount = await campaign.methods.approversCount().call();
+
       console.log(requests);
-        return { address, requests, requestCount };
+        return { address, requests, requestCount,approversCount };
     }
     
     
@@ -31,6 +32,7 @@ class RequestIndex extends Component{
             id = {index}
             request={request}
             address={this.props.address}
+            approversCount = {this.props.approversCount}
             />
         );
         });
