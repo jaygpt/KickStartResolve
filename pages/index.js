@@ -30,6 +30,11 @@ class CampaignIndex extends Component{
         return(
             <div>
             <Layout>
+            <h2 class="ui center aligned icon header">
+  <i class="circular users icon"></i>
+  JGSTART
+</h2>
+<p>It is simple Dapp which use Metamask for different Ethereum Transaction on Rinkeby network.It is an attempt to solve Kickstart Frauds by Voting Rights</p>
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"></link>
             <Link route = "/campaign/new">
             <a>

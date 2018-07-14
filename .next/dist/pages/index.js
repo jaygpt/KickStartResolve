@@ -101,18 +101,31 @@ var CampaignIndex = function (_Component) {
                     fileName: _jsxFileName,
                     lineNumber: 32
                 }
-            }, _react2.default.createElement('link', { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css', __source: {
+            }, _react2.default.createElement('h2', { 'class': 'ui center aligned icon header', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 33
                 }
-            }), _react2.default.createElement(_routes.Link, { route: '/campaign/new', __source: {
+            }, _react2.default.createElement('i', { 'class': 'circular users icon', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 34
+                }
+            }), 'JGSTART'), _react2.default.createElement('p', {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 37
+                }
+            }, 'It is simple Dapp which use Metamask for different Ethereum Transaction on Rinkeby network.It is an attempt to solve Kickstart Frauds by Voting Rights'), _react2.default.createElement('link', { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 38
+                }
+            }), _react2.default.createElement(_routes.Link, { route: '/campaign/new', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 39
                 }
             }, _react2.default.createElement('a', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 35
+                    lineNumber: 40
                 }
             }, _react2.default.createElement(_semanticUiReact.Button, {
                 floated: 'right',
@@ -121,7 +134,7 @@ var CampaignIndex = function (_Component) {
                 primary: true,
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 36
+                    lineNumber: 41
                 }
             }))), this.renderCampaign()));
         }
@@ -163,4 +176,4 @@ var CampaignIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = CampaignIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIkNhcmQiLCJCdXR0b24iLCJMYXlvdXQiLCJMaW5rIiwiQ2FtcGFpZ25JbmRleCIsIml0ZW1zIiwicHJvcHMiLCJjYW1wYWlnbnMiLCJtYXAiLCJoZWFkZXIiLCJhZGRyZXNzIiwiZGVzY3JpcHRpb24iLCJmbHVpZCIsInJlbmRlckNhbXBhaWduIiwibWV0aG9kcyIsImdldERlcGxveWVkQ2FtcGFpZ25zIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBVTs7OztBQUNqQixBQUFPLEFBQWE7Ozs7QUFDcEIsQUFBUyxBQUNULEFBQVM7O0FBQ1QsQUFBTyxBQUFZOzs7O0FBQ25CLEFBQVMsQUFBWTs7Ozs7OztJQUVmLEE7Ozs7Ozs7Ozs7O3lDQVFjLEFBQ1o7Z0JBQU0sYUFBUSxBQUFLLE1BQUwsQUFBVyxVQUFYLEFBQXFCLElBQUksbUJBQVcsQUFDOUM7OzRCQUFPLEFBQ0ssQUFDUjtpREFDSSxBQUFDLDhCQUFLLHNCQUFOLEFBQTRCO3NDQUE1Qjt3Q0FBQSxBQUF1QztBQUF2QztxQkFBQSxrQkFBdUMsY0FBQTs7c0NBQUE7d0NBQUE7QUFBQTtBQUFBLHVCQUh4QyxBQUdDLEFBQXVDLEFBRTNDOzJCQUxKLEFBQU8sQUFLSSxBQUVkO0FBUFUsQUFDSDtBQUZSLEFBQWMsQUFVZCxhQVZjOztpREFVUCxBQUFDLHNCQUFELEFBQU0sU0FBTSxPQUFaLEFBQXNCOzhCQUF0QjtnQ0FBUCxBQUFPLEFBQ1Y7QUFEVTthQUFBOzs7O2lDQUVILEFBQ0o7bUNBQ0ksY0FBQTs7OEJBQUE7Z0NBQUEsQUFDQTtBQURBO0FBQUEsYUFBQSxrQkFDQSxBQUFDOzs4QkFBRDtnQ0FBQSxBQUNBO0FBREE7QUFBQSx1REFDTSxLQUFOLEFBQVUsY0FBYSxNQUF2QixBQUE0Qjs4QkFBNUI7Z0NBREEsQUFDQSxBQUNBO0FBREE7Z0NBQ0EsQUFBQyw4QkFBSyxPQUFOLEFBQWM7OEJBQWQ7Z0NBQUEsQUFDQTtBQURBOytCQUNBLGNBQUE7OzhCQUFBO2dDQUFBLEFBQ0E7QUFEQTtBQUFBLCtCQUNBLEFBQUM7eUJBQUQsQUFDYyxBQUNWO3lCQUZKLEFBRWEsQUFDVDtzQkFISixBQUdXLEFBQ1A7eUJBSko7OzhCQUFBO2dDQUpBLEFBRUEsQUFDQSxBQUNBLEFBUUM7QUFSRDtBQUNJLHVCQVBSLEFBQ0ksQUFDQSxBQVlDLEFBQUssQUFJYjs7O2FBdkNMOzs7Ozs7Ozs7Ozt1Q0FFZ0Msa0JBQUEsQUFBUSxRQUFSLEFBQWdCLHVCQUFoQixBQUF1QyxBOztpQ0FBekQ7QTtpRUFFQyxFQUFFLFdBQUYsQUFBYSxBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBTEEsQSxBQTJDNUI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL2hvbWUvamF5L0Rlc2t0b3AvbmV3L0tpY2tTdGFydCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIkNhcmQiLCJCdXR0b24iLCJMYXlvdXQiLCJMaW5rIiwiQ2FtcGFpZ25JbmRleCIsIml0ZW1zIiwicHJvcHMiLCJjYW1wYWlnbnMiLCJtYXAiLCJoZWFkZXIiLCJhZGRyZXNzIiwiZGVzY3JpcHRpb24iLCJmbHVpZCIsInJlbmRlckNhbXBhaWduIiwibWV0aG9kcyIsImdldERlcGxveWVkQ2FtcGFpZ25zIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBVTs7OztBQUNqQixBQUFPLEFBQWE7Ozs7QUFDcEIsQUFBUyxBQUNULEFBQVM7O0FBQ1QsQUFBTyxBQUFZOzs7O0FBQ25CLEFBQVMsQUFBWTs7Ozs7OztJQUVmLEE7Ozs7Ozs7Ozs7O3lDQVFjLEFBQ1o7Z0JBQU0sYUFBUSxBQUFLLE1BQUwsQUFBVyxVQUFYLEFBQXFCLElBQUksbUJBQVcsQUFDOUM7OzRCQUFPLEFBQ0ssQUFDUjtpREFDSSxBQUFDLDhCQUFLLHNCQUFOLEFBQTRCO3NDQUE1Qjt3Q0FBQSxBQUF1QztBQUF2QztxQkFBQSxrQkFBdUMsY0FBQTs7c0NBQUE7d0NBQUE7QUFBQTtBQUFBLHVCQUh4QyxBQUdDLEFBQXVDLEFBRTNDOzJCQUxKLEFBQU8sQUFLSSxBQUVkO0FBUFUsQUFDSDtBQUZSLEFBQWMsQUFVZCxhQVZjOztpREFVUCxBQUFDLHNCQUFELEFBQU0sU0FBTSxPQUFaLEFBQXNCOzhCQUF0QjtnQ0FBUCxBQUFPLEFBQ1Y7QUFEVTthQUFBOzs7O2lDQUVILEFBQ0o7bUNBQ0ksY0FBQTs7OEJBQUE7Z0NBQUEsQUFDQTtBQURBO0FBQUEsYUFBQSxrQkFDQSxBQUFDOzs4QkFBRDtnQ0FBQSxBQUNBO0FBREE7QUFBQSwrQkFDQSxjQUFBLFFBQUksU0FBSixBQUFVOzhCQUFWO2dDQUFBLEFBQ1Y7QUFEVTtvREFDUCxTQUFILEFBQVM7OEJBQVQ7Z0NBRFUsQUFDVjtBQUFBO2dCQUZVLEFBQ0EsQUFJWiw0QkFBQSxjQUFBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFMWSxBQUtaLEFBQ1ksbU1BQU0sS0FBTixBQUFVLGNBQWEsTUFBdkIsQUFBNEI7OEJBQTVCO2dDQU5BLEFBTUEsQUFDQTtBQURBO2dDQUNBLEFBQUMsOEJBQUssT0FBTixBQUFjOzhCQUFkO2dDQUFBLEFBQ0E7QUFEQTsrQkFDQSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNBO0FBREE7QUFBQSwrQkFDQSxBQUFDO3lCQUFELEFBQ2MsQUFDVjt5QkFGSixBQUVhLEFBQ1Q7c0JBSEosQUFHVyxBQUNQO3lCQUpKOzs4QkFBQTtnQ0FUQSxBQU9BLEFBQ0EsQUFDQSxBQVFDO0FBUkQ7QUFDSSx1QkFaUixBQUNJLEFBQ0EsQUFpQkMsQUFBSyxBQUliOzs7YUE1Q0w7Ozs7Ozs7Ozs7O3VDQUVnQyxrQkFBQSxBQUFRLFFBQVIsQUFBZ0IsdUJBQWhCLEEsQUFBdUM7O2lDQUF6RDtBO2lFQUVDLEVBQUUsV0FBRixBQUFhLEE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFMQSxBLEFBZ0Q1Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvaG9tZS9qYXkvRGVza3RvcC9uZXcvS2lja1N0YXJ0In0=
