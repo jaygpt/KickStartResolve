@@ -9,6 +9,7 @@ export default (props) => {
         <Container>
         <Head>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"></link>
+        <title>JgStart dApp </title>
         </Head>
         <Menu style={{ marginTop: '10px' }}>
         <Menu.Menu position="left">
@@ -25,8 +26,9 @@ export default (props) => {
         </Menu.Menu>
       </Menu>
       {props.children}
+      <h3>CopyRight @ JNGOT</h3>
       </Container>
-        <h1> I am Footer </h1>
+        
         </div>
     )
 };
