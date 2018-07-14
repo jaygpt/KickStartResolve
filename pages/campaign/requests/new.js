@@ -32,7 +32,7 @@ class NewRequest extends Component{
             await campaign.methods
                 .createRequest(description, web3.utils.toWei(value,'ether'), recipient)
                 .send({from: accounts[0]});
-            Router.pushRoute(`/campaign/${this.props.address}/requests`);
+            Router.pushRoute(`/campaign/${this.props.address}/request`);
         }catch(err){
             this.setState({errorMessage: err.message});
         }
