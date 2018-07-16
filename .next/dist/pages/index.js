@@ -50,9 +50,6 @@ var _routes = require('../routes');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/home/jay/Desktop/new/KickStart/pages/index.js?entry';
-
-
 var CampaignIndex = function (_Component) {
     (0, _inherits3.default)(CampaignIndex, _Component);
 
@@ -68,74 +65,21 @@ var CampaignIndex = function (_Component) {
             var items = this.props.campaigns.map(function (address) {
                 return {
                     header: address,
-                    description: _react2.default.createElement(_routes.Link, { route: '/campaign/' + address, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 21
-                        }
-                    }, _react2.default.createElement('a', {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 21
-                        }
-                    }, 'View Description ')),
+                    description: _react2.default.createElement(_routes.Link, { route: '/campaign/' + address }, _react2.default.createElement('a', null, 'View Description ')),
                     fluid: true
                 };
             });
 
-            return _react2.default.createElement(_semanticUiReact.Card.Group, { items: items, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 27
-                }
-            });
+            return _react2.default.createElement(_semanticUiReact.Card.Group, { items: items });
         }
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 31
-                }
-            }, _react2.default.createElement(_layout2.default, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 32
-                }
-            }, _react2.default.createElement('h2', { 'class': 'ui center aligned icon header', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 33
-                }
-            }, _react2.default.createElement('i', { 'class': 'circular users icon', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 34
-                }
-            }), 'JGSTART'), _react2.default.createElement('p', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 37
-                }
-            }, 'It is simple Dapp which use Metamask for different Ethereum Transaction on Rinkeby network.It is an attempt to solve Kickstart Frauds by Voting Rights'), _react2.default.createElement('link', { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 38
-                }
-            }), _react2.default.createElement(_routes.Link, { route: '/campaign/new', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 39
-                }
-            }, _react2.default.createElement('a', {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 40
-                }
-            }, _react2.default.createElement(_semanticUiReact.Button, {
+            return _react2.default.createElement('div', null, _react2.default.createElement(_layout2.default, null, _react2.default.createElement('h2', { 'class': 'ui center aligned icon header' }, _react2.default.createElement('i', { 'class': 'circular users icon' }), 'JGSTART'), _react2.default.createElement('p', null, 'It is simple Dapp which use Metamask for different Ethereum Transaction on Rinkeby network.It is an attempt to solve Kickstart Frauds by Voting Rights'), _react2.default.createElement('link', { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css' }), _react2.default.createElement(_routes.Link, { route: '/campaign/new' }, _react2.default.createElement('a', null, _react2.default.createElement(_semanticUiReact.Button, {
                 floated: 'right',
                 content: 'Create Campaign',
                 icon: 'add circle',
-                primary: true,
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 41
-                }
+                primary: true
             }))), this.renderCampaign()));
         }
     }], [{
@@ -176,4 +120,3 @@ var CampaignIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = CampaignIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiZmFjdG9yeSIsIkNhcmQiLCJCdXR0b24iLCJMYXlvdXQiLCJMaW5rIiwiQ2FtcGFpZ25JbmRleCIsIml0ZW1zIiwicHJvcHMiLCJjYW1wYWlnbnMiLCJtYXAiLCJoZWFkZXIiLCJhZGRyZXNzIiwiZGVzY3JpcHRpb24iLCJmbHVpZCIsInJlbmRlckNhbXBhaWduIiwibWV0aG9kcyIsImdldERlcGxveWVkQ2FtcGFpZ25zIiwiY2FsbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBVTs7OztBQUNqQixBQUFPLEFBQWE7Ozs7QUFDcEIsQUFBUyxBQUNULEFBQVM7O0FBQ1QsQUFBTyxBQUFZOzs7O0FBQ25CLEFBQVMsQUFBWTs7Ozs7OztJQUVmLEE7Ozs7Ozs7Ozs7O3lDQVFjLEFBQ1o7Z0JBQU0sYUFBUSxBQUFLLE1BQUwsQUFBVyxVQUFYLEFBQXFCLElBQUksbUJBQVcsQUFDOUM7OzRCQUFPLEFBQ0ssQUFDUjtpREFDSSxBQUFDLDhCQUFLLHNCQUFOLEFBQTRCO3NDQUE1Qjt3Q0FBQSxBQUF1QztBQUF2QztxQkFBQSxrQkFBdUMsY0FBQTs7c0NBQUE7d0NBQUE7QUFBQTtBQUFBLHVCQUh4QyxBQUdDLEFBQXVDLEFBRTNDOzJCQUxKLEFBQU8sQUFLSSxBQUVkO0FBUFUsQUFDSDtBQUZSLEFBQWMsQUFVZCxhQVZjOztpREFVUCxBQUFDLHNCQUFELEFBQU0sU0FBTSxPQUFaLEFBQXNCOzhCQUF0QjtnQ0FBUCxBQUFPLEFBQ1Y7QUFEVTthQUFBOzs7O2lDQUVILEFBQ0o7bUNBQ0ksY0FBQTs7OEJBQUE7Z0NBQUEsQUFDQTtBQURBO0FBQUEsYUFBQSxrQkFDQSxBQUFDOzs4QkFBRDtnQ0FBQSxBQUNBO0FBREE7QUFBQSwrQkFDQSxjQUFBLFFBQUksU0FBSixBQUFVOzhCQUFWO2dDQUFBLEFBQ1Y7QUFEVTtvREFDUCxTQUFILEFBQVM7OEJBQVQ7Z0NBRFUsQUFDVjtBQUFBO2dCQUZVLEFBQ0EsQUFJWiw0QkFBQSxjQUFBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFMWSxBQUtaLEFBQ1ksbU1BQU0sS0FBTixBQUFVLGNBQWEsTUFBdkIsQUFBNEI7OEJBQTVCO2dDQU5BLEFBTUEsQUFDQTtBQURBO2dDQUNBLEFBQUMsOEJBQUssT0FBTixBQUFjOzhCQUFkO2dDQUFBLEFBQ0E7QUFEQTsrQkFDQSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNBO0FBREE7QUFBQSwrQkFDQSxBQUFDO3lCQUFELEFBQ2MsQUFDVjt5QkFGSixBQUVhLEFBQ1Q7c0JBSEosQUFHVyxBQUNQO3lCQUpKOzs4QkFBQTtnQ0FUQSxBQU9BLEFBQ0EsQUFDQSxBQVFDO0FBUkQ7QUFDSSx1QkFaUixBQUNJLEFBQ0EsQUFpQkMsQUFBSyxBQUliOzs7YUE1Q0w7Ozs7Ozs7Ozs7O3VDQUVnQyxrQkFBQSxBQUFRLFFBQVIsQUFBZ0IsdUJBQWhCLEEsQUFBdUM7O2lDQUF6RDtBO2lFQUVDLEVBQUUsV0FBRixBQUFhLEE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFMQSxBLEFBZ0Q1Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvaG9tZS9qYXkvRGVza3RvcC9uZXcvS2lja1N0YXJ0In0=
